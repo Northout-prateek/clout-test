@@ -4,18 +4,18 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login --region $AWS_DEFAULT_REGION
+      - aws ecr get-login --region us-west-2
   build:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t awsome-ecr-repo .
-      - docker tag awsome-ecr-repo:latest 500735694507.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/awsome-ecr-repo:latest     
+      - docker tag awsome-ecr-repo:latest 500735694507.dkr.ecr.us-west-2.amazonaws.com/awsome-ecr-repo:latest     
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 500735694507.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/awsome-ecr-repo:latest
+      - docker push 500735694507.dkr.ecr.us-west-2.amazonaws.com/awsome-ecr-repo:latest
       - echo renaming _Dockerrun.aws.json file
       - mv _Dockerrun.aws.json Dockerrun.aws.json
       - echo deleting Dockerfile
