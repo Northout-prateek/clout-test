@@ -1,9 +1,6 @@
 version: 0.1
 
 phases:
-  install:
-    docker: 
-      - 18
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
