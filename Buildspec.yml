@@ -1,6 +1,9 @@
 version: 0.1
 
 phases:
+  install:
+    runtime-versions:
+      docker: 18
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -11,7 +14,7 @@ phases:
       - echo Building the Docker image...          
       - docker build -t awsome-ecr-repo .
       - docker tag awsome-ecr-repo:latest 500735694507.dkr.ecr.us-east-1.amazonaws.com/awsome-ecr-repo:latest     
-  post_build:
+    post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
