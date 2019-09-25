@@ -1,5 +1,5 @@
 {
-  "AWSEBDockerrunVersion": "",
+  "AWSEBDockerrunVersion": "2",
   "Volumes": [
     {
       "ContainerDirectory": "/var/app",
