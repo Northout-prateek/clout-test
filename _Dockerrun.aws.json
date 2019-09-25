@@ -1,6 +1,6 @@
 
   "AWSEBDockerrunVersion": 2,
- 
+[ 
   "containerDefinitions": 
     {
       "name": "app",
@@ -8,4 +8,4 @@
       "essential": true,
       "memory": 128
     }
-         
+]
