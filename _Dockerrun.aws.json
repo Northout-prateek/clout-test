@@ -1,12 +1,12 @@
 {
   "AWSEBDockerrunVersion": 2,
  
-  "containerDefinitions": [
+  "containerDefinitions": 
     {
       "name": "app",
       "image": "500735694507.dkr.ecr.us-east-1.amazonaws.com/awsome-ecr-repo:latest",
       "essential": true,
       "memory": 128
     },
-         ]
+         
 }
